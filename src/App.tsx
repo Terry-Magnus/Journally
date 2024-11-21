@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <Text variant="bold" className="text-center mb-6 text-4xl">
           Journally
         </Text>
-        <Text variant="italic" size="sm" className="text-center mb-6">
+        <Text variant="italic" size="base" className="text-center mb-6">
           Tell me all your little secrets..... I won't tell🤫
         </Text>
 
