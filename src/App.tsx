@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <Container className="bg-gray-100 justify-center">
       <Box className="w-full max-w-2xl p-6 bg-white rounded-lg shadow-md">
-        <Text variant="bold" className="text-center mb-6 text-5xl">
+        <Text variant="bold" className="text-center mb-6 text-4xl">
           Journally
         </Text>
         <Text variant="italic" size="sm" className="text-center mb-6">
