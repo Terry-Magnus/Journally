@@ -14,7 +14,7 @@ interface JournalState {
 }
 
 const loadEntriesFromSession = (): JournalEntry[] => {
-  const savedEntries = sessionStorage.getItem("journal-entries");
+  const savedEntries = localStorage.getItem("journal-entries");
   return savedEntries ? JSON.parse(savedEntries) : [];
 };
 
@@ -36,7 +36,7 @@ const journalSlice = createSlice({
         createdAt: new Date().toISOString(),
       };
       state.entries.push(newEntry);
-      sessionStorage.setItem("journal-entries", JSON.stringify(state.entries));
+      localStorage.setItem("journal-entries", JSON.stringify(state.entries));
     },
     updateEntry: (state, action: PayloadAction<JournalEntry>) => {
       const index = state.entries.findIndex(
@@ -44,17 +44,14 @@ const journalSlice = createSlice({
       );
       if (index !== -1) {
         state.entries[index] = action.payload;
-        sessionStorage.setItem(
-          "journal-entries",
-          JSON.stringify(state.entries)
-        );
+        localStorage.setItem("journal-entries", JSON.stringify(state.entries));
       }
     },
     deleteEntry: (state, action: PayloadAction<string>) => {
       state.entries = state.entries.filter(
         (entry) => entry.id !== action.payload
       );
-      sessionStorage.setItem("journal-entries", JSON.stringify(state.entries));
+      localStorage.setItem("journal-entries", JSON.stringify(state.entries));
     },
   },
 });

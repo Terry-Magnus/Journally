@@ -7,7 +7,7 @@ type CardProps = {
 
 const Card = ({ children, ...props }: CardProps) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-4">
+    <div className="bg-yellow-100 shadow-md rounded-lg p-4">
       {props.title && (
         <h3 className="text-lg font-semibold mb-2">{props.title}</h3>
       )}

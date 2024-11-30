@@ -12,10 +12,10 @@ const baseClasses =
   "font-medium rounded focus:outline-none focus:ring transition";
 
 const variantClasses: Record<string, string> = {
-  primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
+  primary: "bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500",
   secondary: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500",
   outline:
-    "bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500",
+    "bg-transparent border border-yellow-600 text-yellow-600 hover:bg-yellow-50 focus:ring-blue-500",
 };
 
 const sizeClasses: Record<string, string> = {

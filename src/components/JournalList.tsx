@@ -14,7 +14,7 @@ const JournalList = () => {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 h-[300px] overflow-y-auto">
       {entries.map((entry) => (
         <JournalEntry key={entry.id} entry={entry} />
       ))}
